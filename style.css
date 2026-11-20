@@ -1,0 +1,274 @@
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: #1a1a2e;
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== En-tête ===== */
+header {
+    position: relative;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #e94560 0%, #c1213f 100%);
+    overflow: hidden;
+}
+
+header::after {
+    content: "🎬";
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    font-size: 110px;
+    opacity: 0.15;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+main {
+    padding: 20px 30px 30px;
+}
+
+/* ===== Bandeau info ===== */
+.info {
+    margin: 0 0 20px;
+    padding: 12px 15px;
+    font-size: 12px;
+    color: #7a5b00;
+    background: #fff8e1;
+    border-left: 4px solid #ffc107;
+    border-radius: 6px;
+}
+
+/* ===== Sections ===== */
+fieldset {
+    margin: 0 0 25px;
+    padding: 20px 25px 15px;
+    border: none;
+    border-left: 4px solid #e94560;
+    border-radius: 8px;
+    background: #f8f9fb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Titre de section : placé dans la carte, pas sur la bordure */
+fieldset > legend {
+    float: left;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+fieldset > legend + * {
+    clear: both;
+}
+
+/* Sous-groupe (radios / cases à cocher) */
+fieldset.group {
+    margin: 0 0 20px;
+    padding: 10px 20px 15px;
+    border: 1px solid #d8dce3;
+    border-left: 1px solid #d8dce3;
+    border-radius: 8px;
+    background: transparent;
+    box-shadow: none;
+}
+
+fieldset.group > legend {
+    float: none;
+    width: auto;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e94560;
+}
+
+fieldset.group > legend + * {
+    clear: none;
+}
+
+/* ===== Champs ===== */
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.row .field {
+    flex: 1;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="url"],
+input[type="week"],
+input[type="time"],
+input[type="datetime-local"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-family: inherit;
+    font-size: 13px;
+    color: #1a1a2e;
+    background: #ffffff;
+    border: 2px solid #e1e5ea;
+    border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e94560;
+}
+
+select[multiple] {
+    padding: 8px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* ===== Radios et cases à cocher ===== */
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    padding: 10px 6px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.option input {
+    accent-color: #e94560;
+    width: 16px;
+    height: 16px;
+}
+
+/* ===== Curseur de fréquence ===== */
+.range-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.range-line input[type="range"] {
+    flex: 1;
+    accent-color: #e94560;
+}
+
+.badge {
+    min-width: 50px;
+    padding: 6px 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    background: #e94560;
+    border-radius: 20px;
+}
+
+/* ===== Couleur ===== */
+input[type="color"] {
+    width: 80px;
+    height: 36px;
+    padding: 2px;
+    border: 2px solid #e1e5ea;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+/* ===== Fichiers ===== */
+input[type="file"] {
+    padding: 8px;
+    font-size: 12px;
+    background: #ffffff;
+    border: 2px dashed #d0d5dd;
+    border-radius: 8px;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* ===== Bouton ===== */
+.submit-zone {
+    text-align: center;
+}
+
+button[type="submit"] {
+    padding: 14px 40px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(135deg, #e94560 0%, #c1213f 100%);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 6px 15px rgba(233, 69, 96, 0.4);
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
